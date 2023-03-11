@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def dockerfile = 'Dockerfile'
+                    def dockerfile = 'Dockerfile1'
                     docker.build('my-dotnet:latest', "-f /samples/dotnetapp/${dockerfile}")
                 }
             }
