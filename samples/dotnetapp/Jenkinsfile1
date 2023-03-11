@@ -5,8 +5,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def dockerfile = 'Dockerfile1'
-                    docker.build('my-dotnet:latest', ". ")
+                    def dockerfile = 'Dockerfile.rka'
+                    docker.build('my-dotnet:latest', "-f ${dockerfile} . ")
                 }
             }
         }
